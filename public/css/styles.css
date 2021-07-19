@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Piazzolla", serif;
+}
+
+:root {
+    --main-bg: #2d4059;
+    --main-color: #ea5455;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.navbar {
+    background-color: var(--main-color);
+    font-size: 1.8rem;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.navbar a:hover {
+    color: #fff;
+}
+
+.mainBg {
+    height: auto;
+    padding: 12px;
+}
+
+.navbar-brand {
+    color: #2d4059;
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    color: #2d4059;
+}
+
+.navbar-toggler-icon {
+    background-color: #2d4059;
+}
+
+.fa-snowflake {
+    transition: all linear;
+    animation: rot 2s infinite linear;
+    color: #2d4059;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.textColor {
+    color: #ea5455;
+}
+
+.main_header_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_header_left p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.main_header_left h1 {
+    font-size: 4rem;
+}
+
+.main_header_right p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.main_header_right h1 {
+    font-size: 4rem;
+}
+
+.main_header_left a {
+    margin: 20px;
+    border: 2px solid #ea5455;
+    border-radius: 5px;
+    color: #2d4059;
+    width: 9rem;
+}
+
+.main_header_left a:hover {
+    color: #ea5455;
+    border: 2px solid #2d4059;
+}
+
+.main_header_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homeBtn {
+    /* border: 2px red solid; */
+    text-decoration: none;
+    color: #ea5455;
+}
+
+.homeBtn:hover {
+    border: 2px solid #ea5455;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #ea5455;
+}
+
+.carousel-item {
+    height: 400px;
+    width: 560px;
+}
+
+
+/* temp input */
+
+.temp_form {
+    width: 60%;
+    position: relative;
+    margin: 5rem auto;
+}
+
+.temp_form input[type="text"] {
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background: #2d4059;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+
+::placeholder {
+    color: #bfc1c8;
+}
+
+.temp_form input[type="submit"] {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #ea5455;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.temp_form input[type="submit"]:hover {
+    color: #ea5455;
+    background: #fff;
+}
+
+
+/* tempinfo */
+
+.tempInformation {
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #2d4059;
+    border-radius: 1rem;
+}
+
+.top_layer {
+    width: 100%;
+    height: 15%;
+    background-color: #ea5455;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem 0;
+}
+
+.top_layer p {
+    color: #fff;
+    font-weight: 300;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.main_layer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.main_layer #city_name {
+    padding: 2rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.main_layer .middle_layer {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.fa {
+    color: #ea5455;
+}
+
+sup {
+    font-size: 3rem;
+    margin-top: -2rem;
+}
+
+.data_hide {
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+footer {
+    background-color: #2d4059;
+    color: #ea5455;
+    text-align: center;
+    line-height: 7rem;
+    font-size: 1.5rem;
+    margin-top: auto;
+}
+
+
+/* responsive code */
+
+@media (max-width: 786px) {
+    .main_header_left {
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right {
+        height: auto;
+        margin: 3rem 0;
+    }
+    .temp_form {
+        width: auto;
+    }
+    .tempInformation {
+        width: auto;
+    }
+    .main_layer .middle_layer p,
+    .main_layer .middle_layer .fa {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+}
+
+.main_header_left figure img {
+    height: 40rem;
+    /* filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3)); */
+}
